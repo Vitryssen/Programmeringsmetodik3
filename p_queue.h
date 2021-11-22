@@ -5,7 +5,9 @@
 #include <vector>
 #include <algorithm>
 #include <string>
-
+//Implementationen måste ligga i headerfilen då
+//kompilatorn inte vet vilken typ som ska användas
+//också därför mallen skapas först när klassen används
 template<class T>
 struct stockOrder {
 	std::string fullName;
