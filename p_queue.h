@@ -14,7 +14,7 @@ struct stockOrder {
 	T price;
 	stockOrder(std::string name, double price) : fullName(name), price(price) {};
 	bool operator<(const stockOrder& orderToCompare) const {
-		return price > orderToCompare.price;
+		return price < orderToCompare.price;
 	}
 };
 template<class T>

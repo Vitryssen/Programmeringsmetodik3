@@ -17,11 +17,11 @@ int main() {
 	while (!buyOrders.empty() && !sellOrders.empty()) {
 		auto currBuy = buyOrders.pop();
 		auto currSell = sellOrders.pop();
-		if ((currBuy.price >= currSell.price) && (currBuy.fullName != currSell.fullName)) { //Dont buy stocks from yourself
+		if ((currSell.price <= currBuy.price) && (currBuy.fullName != currSell.fullName)) { //Dont buy stocks from yourself
 			std::cout << currBuy.fullName << " k\x94pte aktie fr\x86n " << currSell.fullName << " f\x94r priset " << currSell.price << "sek" << std::endl;
 		}
 		else {
-			sellOrders.push(currSell);
+			buyOrders.push(currBuy);
 		}
 	}
 	return 0;
