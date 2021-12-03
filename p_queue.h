@@ -23,8 +23,8 @@ private:
 	std::vector<T> stockOrders;
 public:
 	T pop() {
-		auto poppedStock = stockOrders.back();
-		stockOrders.erase(stockOrders.end()-1);
+		auto poppedStock = stockOrders.at(0);
+		stockOrders.erase(stockOrders.begin());
 		return poppedStock;
 	}
 	void push(const T& value) {

@@ -21,7 +21,7 @@ int main() {
 			std::cout << currBuy.fullName << " k\x94pte aktie fr\x86n " << currSell.fullName << " f\x94r priset " << currSell.price << "sek" << std::endl;
 		}
 		else {
-			buyOrders.push(currBuy);
+			sellOrders.push(currSell);
 		}
 	}
 	return 0;
